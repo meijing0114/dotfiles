@@ -49,3 +49,6 @@ ln -s ${HOMEDIR}/oh-my-zsh ~/.oh-my-zsh
 # git
 ln -s ${HOMEDIR}/gitconfig ~/.gitconfig
 ln -s ${HOMEDIR}/gitignore ~/.gitignore
+
+# mackup confi
+ln -s ${HOMEDIR}/mackup.cfg ~/.mackup.cfg
