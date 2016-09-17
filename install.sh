@@ -44,7 +44,7 @@ ln -s ${HOMEDIR}/zlogin ~/.zlogin
 ln -s ${HOMEDIR}/zshenv ~/.zshenv
 
 # oh my zsh 
-ln -s ${HOMEDIR}/oh-my-zsh ~/.oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # git
 ln -s ${HOMEDIR}/gitconfig ~/.gitconfig

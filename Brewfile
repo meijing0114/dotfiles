@@ -48,7 +48,7 @@ brew 'python3'
 # Development
 brew 'php70', args: ['with-debug', 'without-apache']
 brew 'php56', args: ['with-debug', 'without-apache']
-brew 'mariadb'
+#brew 'mariadb'
 
 # Apps
 cask 'aerial'
@@ -56,12 +56,11 @@ cask 'flux'
 cask 'alfred'
 cask 'atom'
 cask 'dash'
-cask 'dropbox'
 cask 'evernote'
 cask 'fluid'
 cask 'goofy'
 cask 'google-chrome'
-cask 'google-drive'
+#cask 'google-drive'
 cask 'iterm2'
 cask 'mysqlworkbench'
 cask 'rescuetime'
