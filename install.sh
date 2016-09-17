@@ -34,6 +34,8 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 HOMEDIR=${BASEDIR}"/home"
 # vim
+git clone https://github.com/VundleVim/Vundle.vim.git ${HOMEDIR}/vim/bundle/vundle
+cp -r ${BASEDIR}solarized/vim-colors-solarized ${HOMEDIR}/vim/bundle
 ln -s ${HOMEDIR}/vimrc ~/.vimrc
 ln -s ${HOMEDIR}/vim ~/.vim
 ln -s ${HOMEDIR}/vimrc.bundles ~/.vimrc.bundles
