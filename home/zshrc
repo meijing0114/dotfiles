@@ -104,4 +104,67 @@ alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 alias  -s php='subl'
+alias pubmailol='
+rm -r ~/dev/yuewen/qd_oversea_webBackend/repositories/server/ol;
+cp -r ~/dev/yuewen/qd_docker/qidian-docker-1.0.0/qidian-website/repositories/qd_web_oversea/server/ ~/dev/yuewen/qd_oversea_webBackend/repositories/server/ol/ ;
+cd ~/dev/yuewen/qd_oversea_webBackend/repositories/server/ol;
+svn add * --force;
+svn commit -m "发布ol" ./'
+alias pubmailpre='
+rm -r ~/dev/yuewen/qd_oversea_webBackend/repositories/server/pre;
+cp -r ~/dev/yuewen/qd_docker/qidian-docker-1.0.0/qidian-website/repositories/qd_web_oversea/server/ ~/dev/yuewen/qd_oversea_webBackend/repositories/server/pre/ ;
+cd ~/dev/yuewen/qd_oversea_webBackend/repositories/server/pre;
+svn add * --force ;
+svn commit -m "发布pre" ./'
+alias pubmailoa='
+rm -r ~/dev/yuewen/qd_oversea_webBackend/repositories/server/oa;
+cp -r ~/dev/yuewen/qd_docker/qidian-docker-1.0.0/qidian-website/repositories/qd_web_oversea/server/ ~/dev/yuewen/qd_oversea_webBackend/repositories/server/oa/ ;
+cd ~/dev/yuewen/qd_oversea_webBackend/repositories/server/oa;
+svn add * --force;
+svn commit -m "发布oa" ./'
+alias pubensiteol='
+rm -r ~/dev/yuewen/qd_oversea_webBackend/repositories/web/ol;
+cp -r ~/dev/yuewen/qd_docker/qidian-docker-1.0.0/qidian-website/repositories/qd_web_oversea/web/ ~/dev/yuewen/qd_oversea_webBackend/repositories/web/ol/;
+cd ~/dev/yuewen/qd_oversea_webBackend/repositories/web/ol;
+svn add * --force;
+svn commit -m "发布ol" ./'
+alias pubensitepre='
+rm -r ~/dev/yuewen/qd_oversea_webBackend/repositories/web/pre;
+cp -r ~/dev/yuewen/qd_docker/qidian-docker-1.0.0/qidian-website/repositories/qd_web_oversea/web/ ~/dev/yuewen/qd_oversea_webBackend/repositories/web/pre/;
+cd ~/dev/yuewen/qd_oversea_webBackend/repositories/web/pre;
+svn add * --force;
+svn commit -m "发布pre" ./'
+alias pubensiteoa='
+rm -r ~/dev/yuewen/qd_oversea_webBackend/repositories/web/oa;
+cp -r ~/dev/yuewen/qd_docker/qidian-docker-1.0.0/qidian-website/repositories/qd_web_oversea/web/ ~/dev/yuewen/qd_oversea_webBackend/repositories/web/oa/;
+cd ~/dev/yuewen/qd_oversea_webBackend/repositories/web/oa;
+svn add * --force;
+svn commit -m "发布oa" ./'
 
+alias pubtsf='
+rm -r ~/dev/yuewen/qd_oversea_webBackend/tsf-2.0/conf;
+cp -r ~/dev/yuewen/qd_docker/qidian-docker-1.0.0/qidian-website/yuewen_tsf/conf ~/dev/yuewen/qd_oversea_webBackend/tsf-2.0/conf;
+cd ~/dev/yuewen/qd_oversea_webBackend/tsf-2.0;
+svn add * --force;
+svn commit -m "发布tsf" ./'
+
+alias watchMailServ='
+when-changed -r ~/dev/yuewen/qd_docker/qidian-docker-1.0.0/qidian-website/repositories/qd_web_oversea/server -c docker exec qidian-website /usr/local/tsf/bin/tsf mailHttpServ restart'
+alias watchWebNovel='
+when-changed -r ~/dev/yuewen/qd_docker/qidian-docker-1.0.0/qidian-website/repositories/qd_web_oversea/web -c docker exec qidian-website /usr/local/tsf/bin/tsf qdEnHttpServ restart '
+alias watchHybrid='
+when-changed -r ~/dev/yuewen/qd_docker/qidian-docker-1.0.0/qidian-website/repositories/qd_web_oversea/web/website/app.webnovel.com -c docker exec qidian-website /usr/local/tsf/bin/tsf qdEnHybrid restart '
+alias watchInnerapi='
+when-changed -r ~/dev/yuewen/qd_docker/qidian-docker-1.0.0/qidian-website/repositories/qd_web_oversea/web/website/innerapi.webnovel.com -c docker exec qidian-website /usr/local/tsf/bin/tsf innerApiWebnovelServ restart '
+
+alias watchAsynTask='
+when-changed -r ~/dev/yuewen/qd_docker/qidian-docker-1.0.0/qidian-website/repositories/qd_web_oversea/server/backend/asynTaskServ -c docker exec qidian-website /usr/local/tsf/bin/tsf qdEnAsynTask restart '
+
+
+alias logsQdWebsite='tail -f ~/dev/yuewen/qd_docker/qidian-docker-1.0.0/qidian-website/logs/*/*'
+alias dockerMysql='docker exec -it qidian-mysql mysql -uroot -pyuewen'
+alias dockerBackup='docker exec CONTAINER /usr/bin/mysqldump -uroot -pyuewen DATABASE > backup.sql'
+alias dockerRestore='cat backup.sql | docker exec -i CONTAINER /usr/bin/mysql -uroot -pyuewen DATABASE'
+alias dockerRedis='docker exec -it qidian-redis redis-cli -a :'
+alias logsNginx='tail -f ~/dev/yuewen/qd_docker/qidian-docker-1.0.0/qidian-nginx/logs/*'
+alias joversea='ssh liangchen1@115.159.217.38 -p 60022'
