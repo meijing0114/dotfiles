@@ -25,7 +25,7 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
 # set os preferance
-source .macos
+# source .macos
 
 #################
 # configuration #
