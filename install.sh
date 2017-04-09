@@ -39,6 +39,8 @@ cp -r ${BASEDIR}solarized/vim-colors-solarized ${HOMEDIR}/vim/bundle
 ln -s ${HOMEDIR}/vimrc ~/.vimrc
 ln -s ${HOMEDIR}/vim ~/.vim
 ln -s ${HOMEDIR}/vimrc.bundles ~/.vimrc.bundles
+ln -s ${HOMEDIR}/vimrc.bundles.local ~/.vimrc.bundles.local
+
 
 # zsh
 ln -s ${HOMEDIR}/zshrc ~/.zshrc
